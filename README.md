@@ -9,10 +9,18 @@ Start Snort in Sniffer Mode:
 
 Open the terminal in the provided VM.
 Run Snort in sniffer mode using the command: sudo snort -v -l ..
+
+![Screenshot 2024-05-13 11 01 18 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/7fc8365a-e3e6-429f-8c7c-76e7b196b02c)
+
 Let it run for 10-15 seconds, then stop it with ctrl + c.
 Analyze Captured Traffic:
 
+![Screenshot 2024-05-13 11 01 34 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/b9d45fb6-d9a9-451e-b1a8-523a95c4d5a1)
+
 Use the command sudo snort -r snort.log.<timestamp> -X to view captured traffic.
+
+![Screenshot 2024-05-13 11 04 39 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/2d9398c8-1e41-4b6e-b715-374829d87947)
+
 Look for packets involving port 22 (SSH) using grep.
 Narrow down the results by inspecting the packets.
 Write an IPS Rule:
