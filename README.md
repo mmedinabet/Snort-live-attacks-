@@ -59,15 +59,29 @@ Stop Snort with ctrl + c.
 Open flag.txt to retrieve the flag.
 
 Answer Questions:
-What is the name of the service under attack? (Answer: SSH)
-What is the used protocol/port in the attack? (Answer: TCP/22)
+- What is the name of the service under attack? (Answer: SSH)
+- What is the used protocol/port in the attack? (Answer: TCP/22)
 
 <h2> Scenario 2 - Reverse-Shell </h2>
 Objective: Identify and defend against a reverse shell attack.
 
 Start Snort in Sniffer Mode:
 
+![Screenshot 2024-05-13 11 46 17 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/19681547-315a-40fb-87ef-ea109a9d0c31)
+
 Repeat steps 1 and 2 from Scenario 1.
+
+![Screenshot 2024-05-13 11 48 25 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/1e5fc1c8-af3b-41c1-8b4d-5c5dd5a7ca88)
+
+![Screenshot 2024-05-13 11 50 01 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/c768692d-1f41-43ec-ba55-0060d45abd19)
+
+![Screenshot 2024-05-13 11 50 14 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/5c43b820-5e57-4cb8-92bd-7a248581bef2)
+
+![Screenshot 2024-05-13 11 53 01 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/33b340ff-cfa8-4b74-9432-d05bb5b69280)
+
+![Screenshot 2024-05-13 11 54 31 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/e4ffc26c-c5a9-4a81-80e7-5c842551eece)
+
+
 Write an IPS Rule:
 
 Open the local.rules file.
@@ -76,7 +90,12 @@ sql
 Copy code
 drop tcp any 4444 <> any any (msg:"Reverse Shell Detected"; sid:100001; rev:1;)
 Save and close the file.
+
+![Screenshot 2024-05-13 11 57 13 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/a98abf35-5c05-47c9-ade5-ae64383da148)
+
 Run Snort in IPS Mode:
+![Screenshot 2024-05-13 12 02 13 PM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/ef520d84-3056-41ec-9d4c-6d40fa7e29f9)
+
 
 Repeat step 4 from Scenario 1.
 Answer Questions:
