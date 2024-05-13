@@ -22,7 +22,21 @@ Use the command sudo snort -r snort.log.<timestamp> -X to view captured traffic.
 ![Screenshot 2024-05-13 11 04 39 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/2d9398c8-1e41-4b6e-b715-374829d87947)
 
 Look for packets involving port 22 (SSH) using grep.
+
+![Screenshot 2024-05-13 11 08 25 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/8e452e2b-2fa1-4866-acd0-4a2b72da17ff)
+
+![Screenshot 2024-05-13 11 07 20 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/b09db4c9-eaf3-415c-9027-3ee49d328abe)
+
 Narrow down the results by inspecting the packets.
+
+![Screenshot 2024-05-13 11 10 16 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/af0c6959-b83f-4eaa-873e-af51870b9465)
+
+![Screenshot 2024-05-13 11 10 45 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/f3d12797-a172-45bc-aa06-a91afaa3b985)
+
+![Screenshot 2024-05-13 11 12 27 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/69276501-5463-4af0-a2ae-fdc9a4ad857a)
+
+![Screenshot 2024-05-13 11 14 13 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/f77d6388-c579-4a50-aeef-167df140d62b)
+
 Write an IPS Rule:
 
 Open the local.rules file using sudo gedit /etc/snort/rules/local.rules.
@@ -34,7 +48,11 @@ Run Snort in IPS Mode:
 
 Run Snort in IPS mode using:
 
+![Screenshot 2024-05-13 11 18 32 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/93c90a69-2881-42ec-bffe-0d1bdfd3b043)
+
 sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth1 -A full
+
+![Screenshot 2024-05-13 11 20 40 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/99a4334a-234a-43fd-b7ad-8fb7003717c3)
 
 Wait for the flag.txt file to appear on the desktop.
 Stop Snort with ctrl + c.
