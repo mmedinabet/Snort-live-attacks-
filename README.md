@@ -83,13 +83,11 @@ Repeat steps 1 and 2 from Scenario 1.
 
 
 Write an IPS Rule:
-
-Open the local.rules file.
-Write a rule to drop traffic targeting port 4444:
-sql
-Copy code
-drop tcp any 4444 <> any any (msg:"Reverse Shell Detected"; sid:100001; rev:1;)
-Save and close the file.
+- Open the local.rules file.
+- Write a rule to drop traffic targeting port 4444:
+- sql
+- Copy code: drop tcp any 4444 <> any any (msg:"Reverse Shell Detected"; sid:100001; rev:1;)
+- Save and close the file.
 
 ![Screenshot 2024-05-13 11 57 13 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/a98abf35-5c05-47c9-ade5-ae64383da148)
 
@@ -100,8 +98,8 @@ Run Snort in IPS Mode:
 Repeat step 4 from Scenario 1.
 Answer Questions:
 
-What is the used protocol/port in the attack? (Answer: TCP/4444)
-Which tool is highly associated with this specific port number? (Answer: Metasploit)
+- What is the used protocol/port in the attack? (Answer: TCP/4444)
+- Which tool is highly associated with this specific port number? (Answer: Metasploit)
 
 <h2>Conclusion</h2>
 
