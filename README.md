@@ -82,12 +82,7 @@ Repeat steps 1 and 2 from Scenario 1.
 ![Screenshot 2024-05-13 11 54 31 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/e4ffc26c-c5a9-4a81-80e7-5c842551eece)
 
 
-Write an IPS Rule:
-- Open the local.rules file.
-- Write a rule to drop traffic targeting port 4444:
-- sql
-- Copy code: drop tcp any 4444 <> any any (msg:"Reverse Shell Detected"; sid:100001; rev:1;)
-- Save and close the file.
+Write an IPS Rule to drop traffic targeting port 4444:
 
 ![Screenshot 2024-05-13 11 57 13 AM](https://github.com/mmedinabet/Snort-live-attacks-/assets/142737434/a98abf35-5c05-47c9-ade5-ae64383da148)
 
